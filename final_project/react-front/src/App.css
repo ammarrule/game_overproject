@@ -1,0 +1,532 @@
+body {
+  background-image: url("images/arcade.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.App {
+  text-align: left;
+}
+
+.logo-fix {
+  position: fixed; 
+  top: 0%;
+  left: 0%;
+  display: flex;
+}
+
+.logo-title {
+  color: whitesmoke;
+  margin-left: 17px;
+  font-family: 'VT323', monospace;
+  font-size: 3em;
+  display: inline; 
+}
+
+.logo-logo {
+  background-color: yellow;
+  color: darkgoldenrod;
+  border-radius: 100px;
+  margin-top: 32px;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  border: 3px solid darkgoldenrod;
+  display: inline-block; 
+  text-align: center;
+  padding-top: 1px;
+}
+
+.dollar {
+  font-size: 1.2em;
+  bottom: 11%;
+  left: 28%;
+}
+
+@keyframes spin {
+    0% {        
+        transform: rotateY(0deg);
+    }
+    25% {       
+        transform: rotateY(90deg);    
+    }
+    45% {        
+        transform: rotateY(180deg);
+    }
+    75% {      
+      transform: rotateY(270deg)
+    }
+    100% {      
+      transform: rotateY(360deg) 
+    }
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+/*SIDE NAVBAR (APP)=====================================================================================================*/
+
+.sidebar {
+    background-color: rgba(41, 36, 35, 0.53);
+    height: 300px;
+    width: 75px;
+    position: fixed;
+    top: 25%;
+    left: 0%;
+    border-radius: 5px 50px 50px 5px;
+    padding-top: 55px;
+}
+
+.btn-group {
+  position: relative;
+  bottom: 15%;
+  right: 17%;
+}
+
+ .btn1, .btn2, .btn3, .btn4 {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    display: block; 
+    margin: 20px;
+ }
+
+ .btn-icon1, .btn-icon2, .btn-icon3, .btn-icon4 {
+     font-size: 2.7em;
+     z-index: 5;
+ }
+
+ .btn-icon1:hover, .btn-icon2:hover, .btn-icon3:hover, .btn-icon4:hover {
+   font-size: 2.8em;
+   color: white;
+ }
+
+ .btn-icon1 {
+     color: red;
+ }
+
+ .link-1:hover ~ .menuItem-1 {
+    display: block;
+    z-index: 3;
+    width: 125px;
+    height: 25px;
+    color: white;
+    background-color: rgba(41, 36, 35, 0.75);
+    padding-right: 25px;
+    padding-top: 4px;  
+ }
+ 
+
+ .btn-icon2 {
+     color:blue;
+ }
+
+  .link-2:hover ~ .menuItem-2 {
+    display: block;
+    z-index: 3;
+    width: 125px;
+    height: 25px;
+    color: white;
+    background-color: rgba(41, 36, 35, 0.75);
+    padding-right: 25px;
+    padding-top: 4px;  
+ }
+
+ .btn-icon3 {
+     color: yellow;
+ }
+
+  .link-3:hover ~ .menuItem-3 {
+    display: block;
+    z-index: 3;
+    width: 125px;
+    height: 25px;
+    color: white;
+    background-color: rgba(41, 36, 35, 0.75);
+    padding-right: 25px;
+    padding-top: 4px;  
+ }
+
+ .btn-icon4 {
+     color: limegreen;
+ }
+
+  .link-4:hover ~ .menuItem-4 {
+    display: block;
+    z-index: 3;
+    width: 125px;
+    height: 25px;
+    color: white;
+    background-color: rgba(41, 36, 35, 0.75);
+    padding-right: 25px;
+    padding-top: 4px;  
+ }
+
+ .menuItem-1, .menuItem-2, .menuItem-3, .menuItem-4 {
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    color: transparent;
+    text-align: right;    
+    -webkit-transition: all 250ms ease-in;
+    -moz-transition: all 250ms ease-in;
+    -ms-transition: all 250ms ease-in;
+    -o-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;    
+ }
+
+ .menuItem-1 {
+   position: absolute;
+   left: 73%;
+   top: 11%;   
+ }
+
+  .menuItem-2 {
+   position: absolute;
+   left: 73%;
+   top: 35%;
+ }
+
+  .menuItem-3 {
+   position: absolute;
+   left: 73%;
+   top: 58%;
+ }
+
+  .menuItem-4 {
+   position: absolute;
+   left: 73%;
+   top: 81%;
+ }
+
+ /*ABOUT COMPONENT==================================================================================================================*/
+
+.main-landing {
+  color: white;
+  background-color: rgba(128, 128, 128, 0.58);
+  width: 100%;
+  height: 350px;
+  margin-top: 150px;
+  padding: 30px;
+  padding-left: 35px;
+}
+
+.landing-text {
+  width: 500px;
+}
+
+.welcome {
+  font-size: 2em;
+}
+
+.to {
+  font-size: 1em;
+}
+
+.game_over {
+  font-size: 1.8em;
+}
+
+.landing-p {
+  font-size: 1.4em;
+}
+
+/*GAMELIST COMPONENT==============================================================================================*/
+
+.search-wrapper {
+  position: relative;
+  left: 2%;
+  margin-top: 150px;
+}
+
+.search-bar {
+  width: 500px;
+}
+
+.search-btn {
+  position: absolute;
+  top: -1%;
+  left: 45%;
+  color: white;
+  font-size: 1.75em;
+}
+
+.gameview-container {
+  position: relative; 
+}
+
+.gameBox {
+  background-color: rgba(128, 128, 128, 0.58);
+  width: 100%;
+  min-height: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  padding-top: 30px;
+  padding-left: 13px;
+  position: relative;
+  color: white;
+}
+
+.gamePoster {
+  max-width: 225px;
+}
+
+.actualImg {
+  max-height: 280px;
+  min-width: 200px; 
+  min-height: 260px;
+}
+
+
+.gameTitle {
+  position: absolute;
+  left: 25%;
+}
+
+.gameDescription {
+  width: 500px;
+  position: absolute;
+  left: 25%;
+  top: 27%;
+}
+
+.rating-wrapper {
+  position: relative;
+  left: 59%;
+  bottom: 1%;
+  width: 200px;
+  height: auto;
+}
+
+.meta-rating {
+  width: 100px;
+  height: 100px;
+  border: 5px solid lawngreen;
+  background: rgba(139, 195, 74, 0.62);
+  border-radius: 100px;
+  margin-bottom: 18px;
+  padding: 30px;
+}
+
+.meta-rating-bad {
+  background: rgba(252, 0, 94, 0.49);
+  border: 5px solid red;
+}
+
+.meta-rating-alright {
+  background: rgba(255, 235, 59, 0.57);
+  border: 5px solid yellow;
+}
+
+.meta-rating-good {
+  background: rgba(139, 195, 74, 0.62);
+  border: 5px solid lawngreen;
+}
+.gs-rating {
+  width: 100px;
+  height: 100px;
+  border: 5px solid lawngreen;
+  background: rgba(139, 195, 74, 0.62);
+  border-radius: 100px;
+  padding-left:27px;
+  padding-right: 27px;
+  padding-top: 29px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.gs-rating-bad {
+  background: rgba(252, 0, 94, 0.49);
+  border: 5px solid red;
+}
+
+.gs-rating-alright {
+  background: rgba(255, 235, 59, 0.57);
+  border: 5px solid yellow;
+}
+
+.gs-rating-good {
+  background: rgba(139, 195, 74, 0.62);
+  border: 5px solid lawngreen;
+}
+
+.rating-text {
+  font-size: 2em;
+}
+
+.price-box {
+  position: relative;
+  width: 310px;
+  overflow: hidden;
+  background: #337ab7;
+  border-radius: 4px;
+  left: -53%;
+  bottom: 86%;
+  z-index: 2;
+}
+
+.price-btn {
+  float: right;
+  border-radius: 0px;
+}
+
+.price {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+/*=======================================================================================================================*/
+/*SEARCHRESULT COMPONENT*/
+
+.btn-back {
+  position: relative;
+  left: 49%;
+  margin-bottom: 40px;
+}
+
+.btn-search-result {
+  background: none; 
+  border: none;
+}
+
+.load {
+  background-color: yellow;
+  color: darkgoldenrod;
+  border-radius: 100px;
+  margin-top: 240px;
+  margin-left: 430px;
+  width: 200px;
+  height: 200px;
+  border: 10px solid darkgoldenrod;
+  display: inline-block; 
+  text-align: center;
+  padding-top: 57px;
+}
+
+.dollar-load {
+  font-size: 5em;
+}
+
+/*=========================================================================================================================*/
+/*NEWS COMPONENT*/
+
+.newsfeed-wrapper {
+  color: whitesmoke;
+}
+
+.news-title {
+  font-family: 'VT323', monospace;
+  font-size: 3.8em; 
+}
+
+.news-page-heading {
+  margin-top: 150px;  
+}
+.newsBox {
+  background-color: rgba(128, 128, 128, 0.58);
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  padding-top: 12px;
+  padding-left: 13px;
+  position: relative;
+}
+
+.newsImg {
+  max-width: 400px;
+}
+
+.newsTitle {
+  position: absolute;
+  left: 20%;
+  bottom: 112%;
+}
+
+.newsDescription {
+  width: 750px;
+  position: absolute;
+  left: 25%;
+  top: 35%;
+}
+
+.news-desc-url {
+  position: absolute;
+  left: 25%;
+  width: 600px;
+  margin-top: 20px;
+}
+
+/*==GRAPHS COMPONENT===========================================================================================================*/
+.graph-wrapper {
+  color: white; 
+}
+
+.graph-title {
+  margin-top: 150px; 
+}
+
+.graph-title-text {
+  font-family: 'VT323', monospace;
+  font-size: 3.8em; 
+}
+.actual-graph {
+  width: 100%;
+  height: 900px;
+  background: rgba(128, 128, 128, 0.58);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ps4-graph {
+  width:200px;
+  height: 100px;
+  background: navy;
+  color: rgba(128, 128, 128, 0.58);
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  text-align: center;
+}
+
+.ps4-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 26.5%;
+}
+
+.xbox-graph {
+  width: 200px;
+  height: 100px;
+  background: lime;
+  position: absolute;
+  bottom: 10%;
+  left: 61%;
+}
+
+.xbox-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 65.5%;
+}
+
+.ps4-feed {
+  height: 100px;
+  width: 300px;
+}
+
+.line {
+  width: 1000px;
+  height: 5px;
+  background: grey;
+  position: absolute;
+  bottom: 10%;
+  left: 6%;
+}
+
